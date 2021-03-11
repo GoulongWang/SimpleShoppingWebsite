@@ -1,0 +1,25 @@
+#TEST{
+	font-size: 25px;
+	font-family: "微軟正黑體", sans-serif;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	text-align: center;
+	border-radius: 10px;
+	width: 1000px;/*50%*/
+	margin: 0 auto;
+	padding: 25px;
+}
+
+table{
+	margin: 0 auto;
+}
+
+tr a{
+	text-decoration: none;
+	color: #fff;
+}
+
+tr a:hover{
+	color: #000;
+	text-decoration: underline; 
+}

@@ -1,0 +1,139 @@
+<?php include("php/mysql.php");?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>玩具商城</title>
+	<link rel="stylesheet" type="text/css" href="css/homePage_css.css">
+</head>
+<body>
+	<!-- 主選單區 -->
+	<div id="NAV">
+		<ul>
+			<li><a href="homePage.php">首頁</a>
+			<li><a href="#model">金屬模型</a>
+			<li><a href="#puzzles">益智玩具</a>
+			<li><a href="#remote">遙控玩具</a>
+			<li><a href="#doll">玩偶</a>
+			<li><a href="php/history.php">購買紀錄</a>
+			<li><a href="login.html">登入</a>
+	</div>
+
+	<!-- 內容區 -->
+	<div id="CONTENT">
+		<center>
+		<ul>
+			<li style="font-size: 25px" id="model"><span style="font-size: 35px; color: #DC8239">金屬模型</span><br><br>
+				<table>
+					<?php
+					$result = mysqli_query($conn, "SELECT toyImage, toyName, toyPrice, toyId FROM toynet.toy WHERE classID = 1");
+					$index = mysqli_num_rows($result);
+					while ($row = mysqli_fetch_array($result)) $data[] = $row;
+					for($i = 0; $i < $index; $i++)
+						if ($i % 2) 
+							echo "<td>
+							<table>
+							<tr><td><a href='php/detail.php?id={$data[$i][3]}'><img src='img/".$data[$i][0]."'></a><br><br>
+							<tr><td><a href='php/detail.php?id={$data[$i][3]}'>{$data[$i][1]}</a><br><br>
+							<tr><td>‎NT$ {$data[$i][2]}<br><br>
+							</table>";
+						else echo "<tr><td>
+								   <table>
+								   <tr><td><a href='php/detail.php?id={$data[$i][3]}'><img src='img/".$data[$i][0]."'></a><br><br>
+								   <tr><td><a href='php/detail.php?id={$data[$i][3]}'>{$data[$i][1]}</a><br><br>
+								   <tr><td>‎NT$ {$data[$i][2]}<br><br>
+								   </table>";
+					?>
+				</table>
+				<br>
+			<hr>
+			<li style="font-size: 25px" id="puzzles"><span style="font-size: 35px; color: #DC8239">益智玩具</span><br><br>
+				<table>
+					<?php
+					$result = mysqli_query($conn, "SELECT toyImage, toyName, toyPrice, toyId FROM toynet.toy WHERE classID = 2");
+					$index = mysqli_num_rows($result);
+					while ($row = mysqli_fetch_array($result)) $data2[] = $row;
+					for($i = 0; $i < $index; $i++)
+						if ($i % 2) 
+							echo "<td>
+							<table>
+							<tr><td><a href='php/detail.php?id={$data2[$i][3]}'><img src='img/".$data2[$i][0]."'></a><br><br>
+							<tr><td><a href='php/detail.php?id={$data2[$i][3]}'>{$data2[$i][1]}</a><br><br>
+							<tr><td>‎NT$ {$data2[$i][2]}<br><br>
+							</table>";
+						else echo "<tr><td>
+								   <table>
+								   <tr><td><a href='php/detail.php?id={$data2[$i][3]}'><img src='img/".$data2[$i][0]."'></a><br><br>
+								   <tr><td><a href='php/detail.php?id={$data2[$i][3]}'>{$data2[$i][1]}</a><br><br>
+								   <tr><td>‎NT$ {$data2[$i][2]}<br><br>
+								   </table>";
+					?>
+				</table><br>
+			<hr>
+			<li style="font-size: 25px" id="remote"><span style="font-size: 35px; color: #DC8239">遙控玩具</span><br><br>
+				<table>
+					<?php
+					$result = mysqli_query($conn, "SELECT toyImage, toyName, toyPrice, toyId FROM toynet.toy WHERE classID = 3");
+					$index = mysqli_num_rows($result);
+					while ($row = mysqli_fetch_array($result)) $data3[] = $row;
+					for($i = 0; $i < $index; $i++)
+						if ($i % 2) 
+							echo "<td>
+							<table>
+							<tr><td><a href='php/detail.php?id={$data3[$i][3]}'><img src='img/".$data3[$i][0]."'></a><br><br>
+							<tr><td><a href='php/detail.php?id={$data3[$i][3]}'>{$data3[$i][1]}</a><br><br>
+							<tr><td>‎NT$ {$data3[$i][2]}<br><br>
+							</table>";
+						else echo "<tr><td>
+								   <table>
+								   <tr><td><a href='php/detail.php?id={$data3[$i][3]}'><img src='img/".$data3[$i][0]."'></a><br><br>
+								   <tr><td><a href='php/detail.php?id={$data3[$i][3]}'>{$data3[$i][1]}</a><br><br>
+								   <tr><td>‎NT$ {$data3[$i][2]}<br><br>
+								   </table>";
+					?>
+				</table><br>
+			<hr>
+			<li style="font-size: 25px" id="doll"><span style="font-size: 35px; color: #DC8239">玩偶</span><br><br>
+				<table>
+					<?php
+					$result = mysqli_query($conn, "SELECT toyImage, toyName, toyPrice, toyId FROM toynet.toy WHERE classID = 4");
+					$index = mysqli_num_rows($result);
+					while ($row = mysqli_fetch_array($result)) $data4[] = $row;
+					for($i = 0; $i < $index; $i++)
+						if ($i % 2) 
+							echo "<td>
+							<table>
+							<tr><td><a href='php/detail.php?id={$data4[$i][3]}'><img src='img/".$data4[$i][0]."'></a><br><br>
+							<tr><td><a href='php/detail.php?id={$data4[$i][3]}'>{$data4[$i][1]}</a><br><br>
+							<tr><td>‎NT$ {$data4[$i][2]}<br><br>
+							</table>";
+						else echo "<tr><td>
+								   <table>
+								   <tr><td><a href='php/detail.php?id={$data4[$i][3]}'><img src='img/".$data4[$i][0]."'></a><br><br>
+								   <tr><td><a href='php/detail.php?id={$data4[$i][3]}'>{$data4[$i][1]}</a><br><br>
+								   <tr><td>‎NT$ {$data4[$i][2]}<br><br>
+								   </table>";		
+					?>
+				</table>
+		</center>
+	</div>	
+
+	<!-- 頁尾區 -->
+	<div id="FOOTER">
+		<h2>
+		<p>
+		訂閱玩具商城電子報，好康消息第一手知道<br>
+		<!-- 可能會加個輸入電子郵件的東西在這 -->
+		客服時間 : 週一 ~ 週六 9:00 ~ 21:00；週日 9:00 ~ 18:00<br>
+		客服電話: (04) 1234-5678，服務信箱 :TEST@gmail.com<br>
+		</p>
+		<ul>
+			<li><a href="">關於我們</a>
+			<li><a href="">聯絡我們</a>
+			<li><a href="">常見問題</a>
+			<li><a href="">隱私權聲明</a>
+			<li><a href="">免責聲明</a>	
+		</h2>
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@import url("reset.css"); /* 可將所有 css 預設值歸零 */
+
+body{
+	background-color: #EFEFEF; /* 還看不出效果 */
+	font-family: "微軟正黑體", sans-serif;
+}
+
+/* 主選單區 */
+#NAV{
+	width: 1200px;
+	margin: 0 auto; /* 置中 */
+	overflow: /* 可避免此區高度受到 float 浮動設定之影響，
+				 可以預防在沒有設定高度之狀態下，
+				 可能會因為水平排列而產生版面被破壞的情*/
+}
+
+#NAV ul{}
+
+#NAV li{
+	float: left; /* 選單水平排列，要寫在 li 裡 */
+}
+
+#NAV li a{
+	display: block; /* 不能省略這行 */
+	width: 171px;/* 1200px / 7 1200px 均分給 7 個選單*/
+	height: 50px;
+	line-height: 50px; /* 文字高度置中 */
+	background-color: #000;
+	font-size: 15px;
+	color: #fff;
+	letter-spacing: 2px; /*每個字之間的間距*/
+	text-align: center;
+	text-decoration: none;
+}
+
+#NAV li a:hover{
+	background-color: #993336;
+}
+
+/* 內容區 */
+#CONTENT{
+	clear: both; /* 解除浮動 */
+	width: 1200px; 
+	margin: 0 auto;
+	background-color: #FFF;
+	padding-top: 30px;
+	padding-bottom: 30px; 
+}
+
+#CONTENT p{}
+
+/* 頁尾區 */
+#FOOTER{
+	width: 1200px;
+	height: 150px;
+	margin: 0 auto;
+	background-color: #000;
+}
+
+#FOOTER h2{
+	text-align: center;
+	line-height: 35px;
+	color: #fff;
+}
+
+#FOOTER li{
+	float: left; /* 選單水平排列，要寫在 li 裡 */
+}
+
+#FOOTER li a{
+	display: block; /* 不能省略這行 */
+	width: 240px;/* 1200px / 6 1200px 均分給 6 個選單*/
+	height: 50px;
+	line-height: 50px; /* 文字高度置中 */
+	background-color: #000;
+	font-size: 10px;
+	color: #fff;
+	letter-spacing: 2px; /*每個字之間的間距*/
+	text-align: center;
+	text-decoration: none;
+}
+
+#FOOTER p{
+	font-size: 10px;
+}
+
+#FOOTER li a:hover{
+	background-color: #993336;
+}

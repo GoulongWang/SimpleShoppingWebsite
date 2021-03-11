@@ -1,0 +1,25 @@
+.login select{
+	font-family: "微軟正黑體", sans-serif;
+	font-size: 20px; 
+	padding: 5px; 
+	border-radius: 4px; 
+	margin: 15px auto; 
+	display: block; 
+	width: 65%;
+}
+
+input[type="File"]{
+	font-size: 20px;
+	font-family: "微軟正黑體", sans-serif;
+	margin: 10px auto;
+	display: block;
+	width: 65%;
+}
+
+textarea {	
+  	resize : none;
+	font-family: "微軟正黑體", sans-serif;
+	margin: 10px auto;
+	display: block;
+	width: 65%;
+}
